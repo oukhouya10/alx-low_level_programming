@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- *main - program that multiplies two numbers.
+ *main -print program that multiplies two numbers.
  *@argc: argument count
  *@argv: argument vector
- *Return : success 0, different to 0 fail
+ *
+ *Return:0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int i, j;
 
@@ -21,5 +23,6 @@ int main(int argc, char **argv)
 	j = atoi(argv[2]);
 
 	printf("%d\n", i * j);
+
 	return (0);
 }
