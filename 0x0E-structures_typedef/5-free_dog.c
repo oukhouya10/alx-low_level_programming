@@ -2,11 +2,11 @@
 #include "dog.h"
 
 /**
- * free dog - function that frees dogs
- * @d: struct dog to free
+ * free_dog - function that frees dogs
+ *@d: struct dog to free
  *
- * Return: void.
  */
+
 void free_dog(dog_t *d)
 {
 	if (d)
