@@ -7,6 +7,7 @@
 #define ERR_NOWRITE "Error: can't write to %s\n"
 #define ERR_NOCLOSE "Error: can't close fd %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
+#define BUFFER_SIZE 1024
 
 /**
  * main - copie the content of file to another
