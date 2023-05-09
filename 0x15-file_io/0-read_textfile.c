@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_des;
-	ssize_t bytes_r, bytes_w;
+	ssize_t bytes;
 	char buff[READ_BUF_SIZE * 8];
 
 	if (!filename || !letters)
@@ -18,9 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file_des = open(filename, O_RDONLY);
 	if (file_des == -1)
 		return (0);
-	bytes_r = read(file_des, &buff[0], letters);
-	bytes_w = write(STDOUT_FILENO, &buff[0], bytes_r);
-	free(buff);
+	bytes = read(file_des, &buff[0], letters);
+	bytes = write(STDOUT_FILENO, &buff[0], bytes);
 	close(file_des);
-	return (bytes_r);
+	return (bytes);
 }
